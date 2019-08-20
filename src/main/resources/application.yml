@@ -1,0 +1,28 @@
+eureka:
+  client:
+    service-url:
+      #将Eureka客户端client注册到两台Eureka服务端server
+      #defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    hostname: clientName
+#修改应用的名字
+spring:
+  application:
+    name: product
+  #数据库相关
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_sell?characterEncoding=utf-8&useSSL=false
+  #展示sql语句
+  jpa:
+    show-sql: true
+
+#端口号
+server:
+  port: 8081
+
+
+#开发环境dev ，生产环境prod
